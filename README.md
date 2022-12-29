@@ -1,4 +1,10 @@
-# Parallel-Programming
+>Assignment for Architecture for Parallel Computer Systems course @LETI university 2022/23 academic session
+### Contributors
+**Yaseer Buruji Ibrahim** - ibyaseer@mail.ru
+
+[Buruji Yaseer](https://github.com/Meizzy)
+
+# Overview
 Implemented flat combining, a synchronization paradigm based on coarse grained locks, wherein, a single thread holding the lock performs the combined operations of all other threads on a B-Tree to reduce synchronization overhead and cache invalidation traffic. Analyzed difference in performance of fine grained, coarse grained locks against flat combining.
 
 FLAT COMBINING FOR BTREE <br />
