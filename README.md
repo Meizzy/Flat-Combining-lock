@@ -35,9 +35,9 @@ The Algorithm implemented to introduce Flat Combining in B-Tree Structure is as 
 • Insert record, CAS on head <br />
 • Go to step 1 <br />
 
-FINE GRAINED TREE
+COARSE GRAINED TREE
 
-The fine grained B-tree is implemented by hand over hand locking technique. The lock is passed from parent to child
+The coarse grained B-tree is implemented by hand over hand locking technique. The lock is passed from parent to child
 in order to ensure that multiple threads working on different sub trees can execute their operations concurrently.
 The node class is updated to a Lockable node class which contains a re-entrant lock to lock the node by one thread at a time. There is also a head lock (re-entrant lock) which is used to lock the entire b-tree structure monetarily when traversing the root in order to ensure that no other thread is performing a split or merge operation on the root. The following sections give the algorithm for the fine grained insert and contains for hand over hand locking technique.
 
